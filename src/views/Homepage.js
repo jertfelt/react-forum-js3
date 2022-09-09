@@ -4,18 +4,20 @@ import { useState, useEffect } from "react";
 
 const Homepage = () => {
   
-  const [listItems, setListItems] = useState([{
-    title: "test", 
-    body: "tdfasdqa", 
-    id:1,
-    userId: 2
-  },{
-    title: "test2", 
-    body: "tdfasdqa", 
-    id:2,
-    userId: 1
-  },
+  const [listItems, setListItems] = useState([
 ]);
+
+
+const postURL = "https://jsonplaceholder.typicode.com/posts"
+
+useEffect(() => {
+  fetch(postURL).then(res=>{
+    return res.json()
+  })
+  .then((data) => {
+    setListItems(data);
+  })
+})
 
 
 const handleDelete = (id) => {
@@ -36,12 +38,12 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
       </span>
       <div className={styles.homepage__wrapper}>
         <div className={styles.homepage__userlistcontainer}>
+        {listItems && 
         <UserList
         items= {listItems}
         title="All:"
         handleDelete = {handleDelete}
-        ></UserList>
-       
+        ></UserList>}
         {/* <UserList
         items= {listItems.filter((item) => (item.userId === 1))}
         title="Enbart skrivna av #1"
