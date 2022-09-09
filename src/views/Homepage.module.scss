@@ -9,8 +9,9 @@
     text-align: center;
     }
     h2{
-      font-size:30px;
-      line-height:30px;
+      color: $highligt-color;
+      font-size:72px;
+      line-height:1rem;
     }
     img {
       max-height:200px;
@@ -22,7 +23,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding-top:2em;
+  
   }
 
   &__about{
@@ -33,7 +34,10 @@
   &__userlist{
     background-color: $secondary-color;
     padding:3rem;
-    width:50%;
     max-width:700px;
+    
+  }
+  &__userlistcontainer{
+    width:80%;
   }
 }

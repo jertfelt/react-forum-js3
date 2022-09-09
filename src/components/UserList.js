@@ -2,30 +2,25 @@ import styles from "../views/Homepage.module.scss";
 import styling from "./UserList.module.scss";
 import { useState } from "react";
 
-const UserList = () => {
-  const [listItems, setListItems] = useState([{
-    title: "test", 
-    body: "tdfasdqa", 
-    id:1,
-    userId: 2
-  },{
-    title: "test2", 
-    body: "tdfasdqa", 
-    id:2,
-    userId: 1
-  },
-]);
+const UserList = ({title, items}) => {
+
+  // const items = props.items;
+  // console.log(props, items)
+  // const items = props.items;
+  // const title = props.title;
+  
 
   return (
   <div className={styles.homepage__userlist}>
+    <h3 className={styling.userlist__title}>{title}</h3>
     <article className={styling.userlist__grid}>
-    {listItems.map((item) => (
-      <div className="item-preview"
+    { items.map((item) => (
+      <div className={styling.userlist__itempreview}
       key={item.id}>
-        <h2>{item.title}</h2>
+        <h3>{item.title}</h3>
         <p>Skriven av användare #{item.userId}</p>
       </div>
-    ))}
+    ))} 
     </article>
   </div>
     );

@@ -1,0 +1,17 @@
+.userlist{
+  &__title{
+  font-size:42px;
+  }
+
+  &__grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    
+    column-gap: 10px;
+  }
+  &__itempreview{
+   padding:2rem;
+   background-color: antiquewhite;
+    
+  }
+}
