@@ -2,7 +2,7 @@ import styles from "../views/Homepage.module.scss";
 import styling from "./UserList.module.scss";
 import { useEffect, useState } from "react";
 
-const UserList = ({title, items, handleDelete}) => {
+const UserList = ({title, items, }) => {
   
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const UserList = ({title, items, handleDelete}) => {
       key={item.id}>
         <h3>{item.title}</h3>
         <p>Författare: #{item.userId}</p>
-        <button onClick={() => handleDelete(item.id)}>Delete</button>
+        {/* <button onClick={() => handleDelete(item.id)}>Delete</button> */}
       </div>
     ))} 
     </article>
