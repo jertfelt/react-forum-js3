@@ -1,10 +1,9 @@
 import UserList from "../components/UserList";
 import styles from "./Homepage.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Homepage = () => {
-  const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/media/58cd07da8fb87504d054fb1d186abcb0.gif";
-
+  
   const [listItems, setListItems] = useState([{
     title: "test", 
     body: "tdfasdqa", 
@@ -19,6 +18,16 @@ const Homepage = () => {
 ]);
 
 
+const handleDelete = (id) => {
+const filtered = listItems.filter(item => item.id !== id);
+//false -> får inte vara med i filtered! alltså: item.id !== är de som är true, dvs de itemsen utan den specifika id:en blir true. den som har samma id som item.id blir false 
+setListItems(filtered);
+}
+
+
+
+
+const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/media/58cd07da8fb87504d054fb1d186abcb0.gif";
 
   return (
     <div className={styles.homepage__content}>
@@ -30,6 +39,7 @@ const Homepage = () => {
         <UserList
         items= {listItems}
         title="All:"
+        handleDelete = {handleDelete}
         ></UserList>
        
         {/* <UserList
