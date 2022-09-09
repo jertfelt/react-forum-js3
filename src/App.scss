@@ -1,0 +1,15 @@
+@import "./sass/variables.scss";
+@import "./sass/typography.scss";
+
+body{
+  background-color:  $primary-color;
+  margin: 0 auto;
+}
+
+.homepage{
+  &__content{
+    background-color: rebeccapurple;
+    display:block;
+    padding:2rem;
+  }
+}

@@ -1,0 +1,31 @@
+
+@import "../sass/variables";
+@import "../sass/typography";
+
+.homepage{
+  &__content{
+    padding:2rem;
+    h1{
+      font-size:72px;
+      line-height:30px;
+    }
+  }
+  &__wrapper{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top:2em;
+  }
+
+  &__about{
+    display:block;
+    background-color: $secondary-color;
+    padding:3rem;
+  }
+  &__userlist{
+    background-color: $secondary-color;
+    padding:3rem;
+    
+  }
+}

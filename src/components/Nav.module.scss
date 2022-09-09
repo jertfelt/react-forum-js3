@@ -1,0 +1,25 @@
+
+@import "../sass/variables";
+@import "../sass/typography";
+
+.navbar{
+  margin: 0 auto;
+  background-color: $secondary-color;
+  padding:1rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  a{
+    color: $link-color;
+    margin:1rem;
+    text-decoration: none;
+    padding:0.1rem;
+    
+  }
+  a:hover{
+    color: $primary-color;
+    font-family: $hoverfont;
+    font-weight: 900;
+    text-decoration: underline;
+  }
+}
