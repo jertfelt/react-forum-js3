@@ -5,9 +5,16 @@
 .homepage{
   &__content{
     padding:2rem;
-    h1{
-      font-size:72px;
+    span{
+    text-align: center;
+    }
+    h2{
+      font-size:30px;
       line-height:30px;
+    }
+    img {
+      max-height:200px;
+      border-radius:50%;
     }
   }
   &__wrapper{
@@ -20,12 +27,13 @@
 
   &__about{
     display:block;
-    background-color: $secondary-color;
     padding:3rem;
+    border-radius: 19px;
   }
   &__userlist{
     background-color: $secondary-color;
     padding:3rem;
-    
+    width:50%;
+    max-width:700px;
   }
 }
