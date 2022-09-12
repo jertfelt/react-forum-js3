@@ -16,6 +16,7 @@
       font-size:48px;
       flex-wrap: wrap;
     }
+    padding-bottom:8em;
   }
   &__item{
     background-color: $highligt-color;
@@ -24,9 +25,52 @@
     flex-direction: column;
     min-width:400px;
     align-items: flex-start;
+    padding-bottom:3em;
+   
     h3{
       color:$red;
       font-size:34px;
     }
+    button{
+      background-color: $red;
+      color: $highligt-color;
+      padding: 8px;
+      font-weight: bold;
+      font-family: $hoverfont;
+      border:none;
+      display:block;
+      margin-top:5em;
+      
+    }
+    button:hover{
+      background-color: $primary-color;
+    }
+  }
+  &__content{
+    display:block;
+    margin:0 auto;
+    width:80%;
+   
+  }
+  &__postcomments{
+    h4{text-transform: uppercase;}
+    
+  }
+  &__itemTitle{
+    margin-bottom:1rem;
+    text-transform: uppercase;
+  }
+  &__title{
+    display:block;
+    font-size:20px;
+  }
+  &__email{
+    font-style: italic;
+  }
+  &__body{
+    width:80%;
+    text-transform: capitalize;
+    flex-wrap: wrap;
+    margin-bottom:4em;
   }
 }

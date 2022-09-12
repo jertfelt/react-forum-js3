@@ -11,10 +11,12 @@ Kommentarer: https://jsonplaceholder.typicode.com/comments
 
 Användaren ska se samtliga inlägg - skriv endast ut titel för inläggen.
 När man klickar på titeln för ett inlägg ska användaren navigeras till en ny sida med URL:en /post/:id .
+KLART
 
 /post/:id
 
 Här ska användaren kunna se inläggets titel och textinnehåll. Skriv även ut samtliga kommentarer som gjorts i detta inlägg. Varje kommentar ska innehålla dess textinnehåll, samt namn och mail på personen som kommenterat.
+KLART
 
 -->
 Det ska även finnas en knapp för att gå tillbaka till listan över samtliga inlägg (startsidan).

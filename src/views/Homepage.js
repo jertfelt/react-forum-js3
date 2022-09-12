@@ -1,13 +1,19 @@
 import UserList from "../components/UserList";
 import styles from "./Homepage.module.scss";
 import useFetch from "../components/useFetch";
+
 const Homepage = () => {
   //data: listItems - jag döper om data till listItems för att tydliggöra
+
+
 const {data : listItems, isLoading, fetchError} = useFetch("https://jsonplaceholder.typicode.com/posts")
 
 const checkOption = (id) => {}
 
+
 const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/media/58cd07da8fb87504d054fb1d186abcb0.gif";
+
+
 
   return (
     <div className={styles.homepage__content}>
@@ -15,7 +21,7 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
       {isLoading && <div className="loadingMsg">Vänta medans vi laddar sidan...</div>}
       <div className={styles.homepage__wrapper}>
         <div className={styles.homepage__userlistcontainer}>
-       
+
         {listItems && 
         <UserList
         items= {listItems}
@@ -39,6 +45,7 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
         title="Enbart skrivna av #3"
         ></UserList>  */}
       </>}
+      {/* </InfiniteScroll> */}
         </div>
         <div className={styles.homepage__about}>
         <img src={welcomeGIF}alt="Hello and welcome"></img>
