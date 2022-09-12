@@ -1,5 +1,10 @@
 Inlämningsuppgift #2
 
+I det här projektet experimenterar jag ännu mer med map, filter och routers.
+Jag har tittat på parametrar, och hur man kan skicka state via Link.
+Jag lärde mig att jag kunde göra en egen hook - useFetch - och har använt den för att slippa upprepa kod. Jag har även tittat på en scroll-funktion, men har inte fått det att fungera. Jag har också tittat på hur jag kan konvertera userId till namn - tex 1 till "Håkan".
+Jag har också testat CSS-moduler(sass). Jag har tittat väldigt hastigt på att göra hemsidan responsiv.
+
 Inlämningsuppgift 2 - React Forum POC (Proof of Concept)
 
 Din uppgift är att skapa ett forum som innehåller inlägg och kommentarer. Alla dessa ska hämtas från följande API-endpoints:

@@ -3,9 +3,7 @@ import styles from "./Homepage.module.scss";
 import useFetch from "../components/useFetch";
 
 const Homepage = () => {
-  //data: listItems - jag döper om data till listItems för att tydliggöra
-
-
+ 
 const {data : listItems, isLoading, fetchError} = useFetch("https://jsonplaceholder.typicode.com/posts")
 
 const checkOption = (id) => {}
@@ -71,7 +69,15 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
             </select>
             
             </span>
-          
+            <span>
+              I det här projektet experimenterar jag ännu mer med map, filter och routers.
+              <br></br>
+              Jag har tittat på parametrar, och hur man kan skicka state via Link.<br></br>
+              Jag lärde mig att jag kunde göra en egen hook - useFetch - och har använt den för att slippa upprepa kod. 
+              Jag har även tittat på en scroll-funktion, men har inte fått det att fungera.
+              Jag har också tittat på hur jag kan konvertera userId till namn - tex 1 till "Håkan". <br></br>
+              Jag har också testat CSS-moduler(sass). Jag har tittat väldigt hastigt på att göra hemsidan responsiv.
+            </span>
         </div>
         </div>
         
