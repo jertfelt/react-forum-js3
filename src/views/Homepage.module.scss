@@ -9,9 +9,10 @@
     text-align: center;
     }
     h2{
-      color: $red;
+      color: $highligt-color;
       font-size:72px;
       line-height:1rem;
+      font-family: $headerfont;
     }
     img {
       max-height:200px;
@@ -21,23 +22,26 @@
   &__wrapper{
     display:flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-  
+    align-items: flex-start;
+    justify-content: space-around;
   }
 
   &__about{
-    display:block;
+    display:flex;
     padding:3rem;
     border-radius: 19px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width:29%;
   }
   &__userlist{
     background-color: $secondary-color;
-    padding:3rem;
-    max-width:700px;
-    
+    padding:2rem;
+    max-width:100%;
+    min-width:60%;
   }
   &__userlistcontainer{
-    width:80%;
+    width:100%;
   }
 }

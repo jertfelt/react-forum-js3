@@ -29,6 +29,8 @@ const UserList = ({title, items, }) => {
     // const defaultObjIndex = items.findIndex((obj => obj.id >=2));
     // items[defaultObjIndex].userId = "Anders Kvarnström";
 
+  
+
   return (
   <div className={styles.homepage__userlist}>
     <h3 className={styling.userlist__title}>{title}</h3>
@@ -38,7 +40,7 @@ const UserList = ({title, items, }) => {
       key={item.id}>
         <h3>{item.title}</h3>
         <p>Författare: #{item.userId}</p>
-        {/* <button onClick={() => handleDelete(item.id)}>Delete</button> */}
+
       </div>
     ))} 
     </article>

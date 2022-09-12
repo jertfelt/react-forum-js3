@@ -3,6 +3,10 @@
 @import "../sass/typography";
 
 .navbar{
+  h1{
+    color: $red;
+    font-family: $hoverfont;
+  }
   margin: 0 auto;
   background-color: $secondary-color;
   padding:1rem;

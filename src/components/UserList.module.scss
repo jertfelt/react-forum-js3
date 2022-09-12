@@ -1,17 +1,29 @@
+
+@import "../sass/variables";
+@import "../sass/typography";
+
 .userlist{
   &__title{
-  font-size:42px;
+  font-size:34px;
+  color: $red;
+  font-family: $headerfont;
   }
-
   &__grid{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    
     column-gap: 10px;
   }
   &__itempreview{
-   padding:2rem;
-   background-color: antiquewhite;
-    
+  padding:2rem;
+ 
+  background-color: antiquewhite;
+  text-transform: capitalize;
+  border-radius: 9px;
+
+  h3{color: $red;}
+  margin:20px;
+  }
+  &__itempreview:hover{
+    filter: drop-shadow(0 0 0.75rem crimson);
   }
 }
