@@ -1,14 +1,9 @@
 import styles from "../views/Homepage.module.scss";
 import styling from "./UserList.module.scss";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const UserList = ({title, items, }) => {
-  
-
-  useEffect(() => {
-    
-    
-  },[])
   
 
 // // //*byter userId:
@@ -36,12 +31,15 @@ const UserList = ({title, items, }) => {
     <h3 className={styling.userlist__title}>{title}</h3>
     <article className={styling.userlist__grid}>
     {items.map((item) => (
-      <div className={styling.userlist__itempreview}
+      <Link to="/post/:id"
       key={item.id}>
+      <div className={styling.userlist__itempreview}>
+        
         <h3>{item.title}</h3>
         <p>Författare: #{item.userId}</p>
-
+  
       </div>
+      </Link>
     ))} 
     </article>
   </div>

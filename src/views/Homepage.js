@@ -1,6 +1,5 @@
 import UserList from "../components/UserList";
 import styles from "./Homepage.module.scss";
-import { useState, useEffect } from "react";
 import useFetch from "../components/useFetch";
 const Homepage = () => {
   //data: listItems - jag döper om data till listItems för att tydliggöra
@@ -12,9 +11,6 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
 
   return (
     <div className={styles.homepage__content}>
-      <span>
-      <h2>Välkommen!</h2>
-      </span>
       {fetchError && <div>{fetchError}</div>}
       {isLoading && <div className="loadingMsg">Vänta medans vi laddar sidan...</div>}
       <div className={styles.homepage__wrapper}>
@@ -23,7 +19,7 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
         {listItems && 
         <UserList
         items= {listItems}
-        title="Alla poster:"
+        title="Alla inlägg:"
         ></UserList>}
         
         {/*även detta ska renderas i en loop: */}
@@ -49,7 +45,7 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
         <div>
          
     
-          <span>
+          <span className={styles.homepage__filter}>
           <h4>Filtrering:</h4>
             <select onClick={(checkOption)}>
               {/* Rendera ut i en foreach-loop */}
@@ -57,7 +53,7 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
               value="">Välj en:</option>
               <option value="1">1</option>
               <option value="2">2</option>
-              <option value="3">2</option>
+              <option value="3">3</option>
               <option value="4">2</option>
               <option value="5">2</option>
               <option value="6">2</option>

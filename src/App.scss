@@ -3,13 +3,11 @@
 
 body{
   background-color:  $primary-color;
-  margin: 0 auto;
 }
+.App{
 
-.homepage{
-  &__content{
-    background-color: rebeccapurple;
-    display:block;
-    padding:2rem;
-  }
+  margin: 0 auto;
+  margin-top:-1rem;
+  margin-right:-2rem;
+ 
 }

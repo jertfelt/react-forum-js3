@@ -1,12 +1,12 @@
 import styles from "./Nav.module.scss";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return ( 
     <nav className={styles.navbar}>
       <h1>ReactForum</h1>
       <span className="links">
-        <a href="/">Start</a>
-        <a href="/ny">Skapa</a>
+        <Link to ="/">Start</Link>
       </span>
     </nav>
     );

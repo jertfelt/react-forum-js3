@@ -5,6 +5,8 @@
 .homepage{
   &__content{
     padding:2rem;
+    margin-left:1rem;
+    
     span{
     text-align: center;
     }
@@ -34,6 +36,27 @@
     align-items: flex-start;
     justify-content: center;
     max-width:29%;
+ 
+   
+  }
+  &__filter{
+    display:flex;
+    margin-top:2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    select{
+      background-color: antiquewhite;
+      padding:3px;
+      border-radius: 9px;
+      border:none;
+      margin-left:1rem;
+    
+    }
+    h4{
+      color:antiquewhite;
+    
+    }
   }
   &__userlist{
     background-color: $secondary-color;
