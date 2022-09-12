@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../components/useFetch";
 import styles from "./IndividualItem.module.scss";
+
 import { useNavigate, useLocation } from "react-router-dom";
 
 const IndividualItem = () => {
@@ -42,10 +43,11 @@ let thisItem = postitem.filter(item => {
     <div className={styles.detailspage__item}
     >
     <div className={styles.detailspage__content}>
+     
        {thisItem.map((item) => (
       <div className={styles.detailspage__body}
       key={item.id}>
-        
+
         <h3 className={styles.detailspage__itemTitle}>{item.title}.</h3>
         <h4>{item.body}!</h4>
         <p>Författare: #01{item.userId}</p>
