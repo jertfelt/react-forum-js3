@@ -11,6 +11,11 @@ Inlämningsuppgift #2
              <br/>
               Jag har också testat CSS-moduler(sass). Jag har tittat väldigt hastigt på att göra hemsidan responsiv.
               
+              ![image](https://user-images.githubusercontent.com/30622818/189852036-7f527743-fae2-4869-ac67-5bc98915cb0c.png)
+![image](https://user-images.githubusercontent.com/30622818/189852090-de49188e-c412-45c5-96f4-6fec83ecd626.png)
+![image](https://user-images.githubusercontent.com/30622818/189852131-0ee2d0be-a638-4954-87d2-4dad653b0163.png)
+![image](https://user-images.githubusercontent.com/30622818/189852201-124b4b8f-7f83-437c-b5e5-51e345e1c1d1.png)
+
 
 Inlämningsuppgift 2 - React Forum POC (Proof of Concept)
 
@@ -29,6 +34,8 @@ KLART
 
 Här ska användaren kunna se inläggets titel och textinnehåll. Skriv även ut samtliga kommentarer som gjorts i detta inlägg. Varje kommentar ska innehålla dess textinnehåll, samt namn och mail på personen som kommenterat.
 KLART
+![image](https://user-images.githubusercontent.com/30622818/189852244-ec2a3e04-63cf-4567-9467-d2f19b83066e.png)
+
 
 -->
 Det ska även finnas en knapp för att gå tillbaka till listan över samtliga inlägg (startsidan).
