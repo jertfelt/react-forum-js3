@@ -1,15 +1,27 @@
 import UserList from "../components/UserList";
 import styles from "./Homepage.module.scss";
 import useFetch from "../components/useFetch";
+import SelectFilter from "../components/SelectFilter";
+import { useState } from "react";
 
 const Homepage = () => {
- 
 const {data : listItems, isLoading, fetchError} = useFetch("https://jsonplaceholder.typicode.com/posts")
+const [selected, setSelected] = useState("");
+const [showFilter, setShowFilter] = useState(false);
+const [showAll, setShowAll] = useState(true);
 
-const checkOption = (id) => {}
-
+const checkOption =(e)=>{
+  setSelected(e.target.value)
+  setShowFilter(true);
+  setShowAll(false);
+  if(e.target.value ==="showMeAll"){
+    setShowFilter(false);
+    setShowAll(true);
+  }
+  }
 
 const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/media/58cd07da8fb87504d054fb1d186abcb0.gif";
+
 
   return (
     <div className={styles.homepage__content}>
@@ -18,54 +30,37 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
       <div className={styles.homepage__wrapper}>
         <div className={styles.homepage__userlistcontainer}>
 
-        {listItems && 
+        {showAll && 
         <UserList
         items= {listItems}
         title="Alla inlägg:"
         ></UserList>}
         
-        {/*även detta ska renderas i en loop: */}
-        {!isLoading && 
+        {showFilter && 
         <>
         <UserList
-        items= {listItems.filter((item) => (item.userId === 1))}
-        title="Inlägg skrivna av #1"
+        items= {listItems.filter((item) => (item.userId === Number(selected)))}
+        title={`Inlägg skrivna av författare #${selected}`}
         >
         </UserList> 
-        {/* <UserList
-        items= {listItems.filter((item) => (item.userId === 2))}
-        title="Enbart skrivna av #2"
-        ></UserList> 
-         <UserList
-        items= {listItems.filter((item) => (item.userId === 3))}
-        title="Enbart skrivna av #3"
-        ></UserList>  */}
+        
       </>}
       {/* </InfiniteScroll> */}
         </div>
         <div className={styles.homepage__about}>
         <img src={welcomeGIF}alt="Hello and welcome"></img>
         <div>
-         
-    
           <span className={styles.homepage__filter}>
           <h4>Filtrering:</h4>
-            <select onClick={(checkOption)}>
-              {/* Rendera ut i en foreach-loop */}
-              <option onChange={(e) => e.target.value} 
+          <select onChange={(checkOption)}>
+           <option 
               value="">Välj en:</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">2</option>
-              <option value="5">2</option>
-              <option value="6">2</option>
-              <option value="7">2</option>
-              <option value="8">2</option>
-              <option value="9">2</option>
-              <option value="10">2</option>
-            </select>
-            
+              
+            <SelectFilter
+             items= {listItems}></SelectFilter>
+             <option 
+              value="showMeAll">Visa alla!</option>
+          </select>
             </span>
             <span className={styles.homepage__aboutTXT}>
 
