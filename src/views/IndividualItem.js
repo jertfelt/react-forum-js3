@@ -47,7 +47,7 @@ let thisItem = postitem.filter(item => {
        {thisItem.map((item) => (
       <div className={styles.detailspage__body}
       key={item.id}>
-
+        <img src="https://i0.wp.com/boingboing.net/wp-content/uploads/2014/05/diet2.jpg?fit=1000%2C677&ssl=1" alt="A stockphoto"></img>
         <h3 className={styles.detailspage__itemTitle}>{item.title}.</h3>
         <h4>{item.body}!</h4>
         <p>Författare: #01{item.userId}</p>
