@@ -14,7 +14,10 @@ Inlämningsuppgift #2
               Jag har också testat CSS-moduler(sass). Jag har tittat väldigt hastigt på att göra hemsidan responsiv.
               
           
-FILTRERING: ![image](https://user-images.githubusercontent.com/30622818/189852090-de49188e-c412-45c5-96f4-6fec83ecd626.png)
+FILTRERING:
+ ![image](https://user-images.githubusercontent.com/30622818/189852983-538d2e11-053b-4ab6-9e27-8a139e2c0c5b.png)
+
+ ![image](https://user-images.githubusercontent.com/30622818/189852090-de49188e-c412-45c5-96f4-6fec83ecd626.png)
 
 ALLA INLÄGG:
 ![image](https://user-images.githubusercontent.com/30622818/189852131-0ee2d0be-a638-4954-87d2-4dad653b0163.png)
