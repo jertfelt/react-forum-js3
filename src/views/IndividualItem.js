@@ -8,8 +8,9 @@ const IndividualItem = () => {
   const { id } = useParams();
   const {data : allcomments, isLoading, fetchError} = useFetch("https://jsonplaceholder.typicode.com/comments");
   const {data : postitem} = useFetch("https://jsonplaceholder.typicode.com/posts");
-  let navigate = useNavigate();
 
+  // console.log(postitem)
+  let navigate = useNavigate();
   const backButt = (e) => {
     e.preventDefault();
     navigate(-1)
@@ -19,6 +20,11 @@ const IndividualItem = () => {
   // console.log("uselocation:", location)
   const thisItemsId = location.state?.data;
   // console.log("thisItemsId:", thisItemsId)
+  // if (thisItemsId === undefined){
+  //   console.log("test")
+  // }
+  //! Om jag använder thisItemsId, alltså state, så fungerar den enbart om jag KLICKAR mig dit. Men om jag manuellt skriver in adressen så syns den inte. Har därför lagt in en if-sats i "thisItem"-filtreringen som plockar upp thisId ist för thisItemsId. Den ena är parameter och den andra är state.
+  
 
 let thisId = {id};  
 let commentsArray = allcomments.filter(comment => {
@@ -26,9 +32,15 @@ let commentsArray = allcomments.filter(comment => {
 })
 
 let thisItem = postitem.filter(item => {
+  if (thisItemsId === undefined){
+    return item.id === Number(thisId.id)
+  }
   return item.id ===Number(thisItemsId);
 })
+
+
 // console.log("detta id:",thisItem)
+
 
   return ( 
   <div>
