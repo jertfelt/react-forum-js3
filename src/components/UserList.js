@@ -1,11 +1,14 @@
 import styles from "../views/Homepage.module.scss";
 import styling from "./UserList.module.scss";
 import { Link} from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+
+
 
 const UserList = ({title, items, }) => {
-// const [message, setMessage] = useState("");
+
+
+
+  // const [message, setMessage] = useState("");
 // const [noArray, setNoArray] = useState(false);
 
 
@@ -25,6 +28,8 @@ const UserList = ({title, items, }) => {
   return (
   <div className={styles.homepage__userlist}>
     <h3 className={styling.userlist__title}>{title}</h3>
+
+
     <article className={styling.userlist__grid}>
     {/* {noArray &&
         <div className="message">{message}</div>} */}
@@ -41,6 +46,7 @@ const UserList = ({title, items, }) => {
       </Link>
     ))} 
     </article>
+  
   </div>
     );
 }

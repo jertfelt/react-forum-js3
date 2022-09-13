@@ -38,7 +38,7 @@ KLART
 Tekniska krav
 En användare ska kunna skriva in ett id i URL:en (t.ex /post/9) och kunna se inlägget med det id:et.
 
---> Inte klart än !
+-->KLART, se kommentarer i IndividualItem.js
 
 Lycka till!
 

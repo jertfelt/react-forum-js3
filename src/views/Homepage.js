@@ -10,7 +10,18 @@ const [selected, setSelected] = useState("");
 const [showFilter, setShowFilter] = useState(false);
 const [showAll, setShowAll] = useState(true);
 
+// let postsPerPage= listItems.length/5; 
+// let postNumber = postsPerPage;
+// const [amountPosts, setAmountPosts] = useState([...Array(postsPerPage).keys()]);
 
+// const handleScroll=() => {
+// let isAtBottom = document.documentElement.scrollHeight - document.documentElement.scrollTop <= document.documentElement.clientHeight; 
+// if (isAtBottom) { 
+//   postNumber += postsPerPage;
+//   setAmountPosts([...Array(postsPerPage).keys()])
+//   console.log("lägger till")
+// }}
+// window.addEventListener("scroll", handleScroll)
 
 const checkOption =(e)=>{
   setSelected(e.target.value)
