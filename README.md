@@ -1,9 +1,16 @@
 Inlämningsuppgift #2
-
-I det här projektet experimenterar jag ännu mer med map, filter och routers.
-Jag har tittat på parametrar, och hur man kan skicka state via Link.
-Jag lärde mig att jag kunde göra en egen hook - useFetch - och har använt den för att slippa upprepa kod. Jag har även tittat på en scroll-funktion, men har inte fått det att fungera. Jag har också tittat på hur jag kan konvertera userId till namn - tex 1 till "Håkan".
-Jag har också testat CSS-moduler(sass). Jag har tittat väldigt hastigt på att göra hemsidan responsiv.
+ <p>I det här projektet experimenterar jag ännu mer med map, filter och routers.
+              <br/>
+             Jag har tittat på parametrar, och hur man kan skicka state via Link.
+             <br/>
+             Jag har även, utöver uppgifterna, labbat med att filtrera materialet. Samt försökt få den fetchade listan att hamna in en Infinite Scroller.
+            <br/>
+             Jag lärde mig att jag kunde göra en egen hook - useFetch - och har använt den för att slippa upprepa kod. 
+             <br/>
+             Jag har också tittat på hur jag kan konvertera userId till namn - tex 1 till "Håkan", och har testat lite olika varianter. Det som krånglar är att jag på något sätt inte får propsen att exporteras från Homepage till SelectFilter, det blir bara undefined för tillfället. Ska felsöka!
+             <br/>
+              Jag har också testat CSS-moduler(sass). Jag har tittat väldigt hastigt på att göra hemsidan responsiv.
+              
 
 Inlämningsuppgift 2 - React Forum POC (Proof of Concept)
 
