@@ -7,6 +7,10 @@
   font-size:34px;
   color: $red;
   font-family: $headerfont;
+  @media only screen and (max-width: 600px) {
+  margin-left:1rem;
+  
+        }
   }
   &__grid{
     display:grid;
@@ -14,6 +18,13 @@
     column-gap: 10px;
     a{
       text-decoration: none;
+    }
+    @media only screen and (max-width: 600px) {
+    display:flex;
+    flex-direction: column;
+    margin-left:-3em;
+    width:80%;
+    
     }
   }
   &__itempreview{
@@ -28,7 +39,11 @@
   align-items: center;
   flex-direction: column-reverse;
   justify-content: center;
-  
+  @media only screen and (max-width: 600px) {
+    display:flex;
+    flex-direction: column;
+    width:80%;
+    }
   p{
     margin-bottom:2px;
   }

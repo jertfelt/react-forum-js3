@@ -20,12 +20,40 @@
       max-height:200px;
       border-radius:50%;
     }
+
+
+    @media only screen and (max-width: 600px) {
+    
+    padding:8px;
+    margin: 0 auto;
+    display:flex; 
+    width:100%;
+  
+    }
   }
   &__wrapper{
     display:flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
+
+    @media screen and (max-width: 1000px) {
+    width:100%;
+   
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    }
+
+    @media only screen and (max-width: 600px) {
+    
+    display:flex;
+    flex-direction: column-reverse;
+      align-items: center;
+    
+      }
   }
 
   &__about{
@@ -36,14 +64,52 @@
     align-items: flex-start;
     justify-content: center;
     max-width:29%;
- 
-   
+
+    @media screen and (max-width: 1000px) {
+      width:100%;
+      min-width:500px;
+      margin: 0 auto;
+      display:flex;
+      img{
+        margin: 0 auto;
+      }
+      }
+
+    @media only screen and (max-width: 600px) {
+    width:100%;
+    min-width:300px;
+    padding:1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+          }
+  }
+  &__aboutTXT{
+  
+    p{
+      background-color: $secondary-color;
+      padding:1rem;
+      text-align: left;
+      color:$link-color;
+      font-family: $hoverfont;
+      @media only screen and (max-width: 600px) {
+    
+       
+        
+          
+            }
+    }
   }
   &__filter{
     display:flex;
     margin-top:2rem;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 1000px) {
+      justify-content: center;
+      }
 
     select{
       background-color: antiquewhite;
@@ -63,8 +129,37 @@
     padding:2rem;
     max-width:100%;
     min-width:60%;
+
+    @media screen and (max-width: 1000px) {
+      
+     
+    }
+
+
+    @media only screen and (max-width: 600px) {
+    
+    padding:4px;
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:2em;
+    
+        }
   }
   &__userlistcontainer{
     width:100%;
+    @media only screen and (max-width: 600px) {
+    
+      padding:4px;
+      width:90%;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      
+          }
+    
   }
 }
