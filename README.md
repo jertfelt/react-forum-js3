@@ -32,10 +32,13 @@ KLART
 
 -->
 Det ska även finnas en knapp för att gå tillbaka till listan över samtliga inlägg (startsidan).
+KLART
 
 
 Tekniska krav
 En användare ska kunna skriva in ett id i URL:en (t.ex /post/9) och kunna se inlägget med det id:et.
+
+--> Inte klart än !
 
 Lycka till!
 
