@@ -10,15 +10,58 @@ const [selected, setSelected] = useState("");
 const [showFilter, setShowFilter] = useState(false);
 const [showAll, setShowAll] = useState(true);
 
+
+
 const checkOption =(e)=>{
   setSelected(e.target.value)
   setShowFilter(true);
   setShowAll(false);
-  if(e.target.value ==="showMeAll"){
+  if(e.target.value ==="showMeAll" || e.target.value ==="pickOne"){
     setShowFilter(false);
     setShowAll(true);
   }
   }
+
+  const arrWithNames = listItems.map(item => {
+ 
+    
+    if(item.userId === 1){
+      return {...item, userId: "Hannes Fredriksson"}
+    }
+    if(item.userId ===2){
+      return {...item, userId: "Fredrika Karlsson"}
+    }
+    if(item.userId ===3){
+      return {...item, userId: "Örjan Hjalmarsson"}
+    }
+    if(item.userId ===4){
+      return {...item, userId: "Teodor Lundell"}
+    }
+    if(item.userId ===5){
+      return {...item, userId: "Kajsa-Lisa Marklund"}
+    }
+    if(item.userId ===6){
+      return {...item, userId: "Beatrice Skata"}
+    }
+    if(item.userId ===7){
+      return {...item, userId: "Brandon Malmström"}
+    }
+    if(item.userId ===8){
+      return {...item, userId: "Leonidas Lundell"}
+    }
+    if(item.userId ===9){
+      return {...item, userId: "Makode Linde"}
+    }
+    if(item.userId ===10){
+      return {...item, userId: "Alice Fux"}
+    }
+    // else {
+    //   return {...item, userId: "Tova Johansson Jertfelt"}
+    // }
+  
+  })
+
+
 
 const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/media/58cd07da8fb87504d054fb1d186abcb0.gif";
 
@@ -32,15 +75,15 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
 
         {showAll && 
         <UserList
-        items= {listItems}
+        items= {arrWithNames}
         title="Alla inlägg:"
         ></UserList>}
         
         {showFilter && 
         <>
         <UserList
-        items= {listItems.filter((item) => (item.userId === Number(selected)))}
-        title={`Inlägg skrivna av författare #${selected}`}
+        items= {arrWithNames.filter((item) => (item.userId === (selected)))}
+        title={`Inlägg av ${selected}`}
         >
         </UserList> 
         
@@ -54,7 +97,7 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
           <h4>Filtrering:</h4>
           <select onChange={(checkOption)}>
            <option 
-              value="">Välj en:</option>
+              value="pickOne">Välj en:</option>
               
             <SelectFilter
              items= {listItems}></SelectFilter>
@@ -65,11 +108,17 @@ const welcomeGIF = "https://cdn.dribbble.com/users/1261045/screenshots/11391612/
             <span className={styles.homepage__aboutTXT}>
 
               <p>I det här projektet experimenterar jag ännu mer med map, filter och routers.
-              Jag har tittat på parametrar, och hur man kan skicka state via Link.
-              Jag lärde mig att jag kunde göra en egen hook - useFetch - och har använt den för att slippa upprepa kod. 
-              Jag har även tittat på en scroll-funktion, men har inte fått det att fungera.
-              Jag har också tittat på hur jag kan konvertera userId till namn - tex 1 till "Håkan". 
+              <br/>
+             Jag har tittat på parametrar, och hur man kan skicka state via Link.
+             <br/>
+             Jag har även, utöver uppgifterna, labbat med att filtrera materialet. Samt försökt få den fetchade listan att hamna in en Infinite Scroller.
+            <br/>
+             Jag lärde mig att jag kunde göra en egen hook - useFetch - och har använt den för att slippa upprepa kod. 
+             <br/>
+             Jag har också tittat på hur jag kan konvertera userId till namn - tex 1 till "Håkan", och har testat lite olika varianter. Det som krånglar är att jag på något sätt inte får propsen att exporteras från Homepage till SelectFilter, det blir bara undefined för tillfället. Ska felsöka!
+             <br/>
               Jag har också testat CSS-moduler(sass). Jag har tittat väldigt hastigt på att göra hemsidan responsiv.
+              
               </p>
             </span>
         </div>
